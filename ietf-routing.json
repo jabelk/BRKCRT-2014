@@ -1,0 +1,28 @@
+{
+    "ietf-routing:routing-instance": [
+        {
+            "name": "default",
+            "description": "default-vrf [read-only]",
+            "routing-protocols": {
+                "routing-protocol": [
+                    {
+                        "type": "ietf-routing:static",
+                        "name": "1",
+                        "static-routes": {
+                            "ietf-ipv4-unicast-routing:ipv4": {
+                                "route": [
+                                    {
+                                        "destination-prefix": "0.0.0.0/0",
+                                        "next-hop": {
+                                            "outgoing-interface": "GigabitEthernet1"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

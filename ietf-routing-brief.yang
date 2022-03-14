@@ -1,0 +1,73 @@
+  module ietf-routing {
+     namespace "urn:ietf:params:xml:ns:yang:ietf-routing";
+     prefix "rt";
+     import ietf-yang-types {
+       prefix "yang";
+     }
+     import ietf-interfaces {
+       prefix "if";
+     }
+     container routing {
+       description
+         "Configuration parameters for the routing subsystem.";
+       list routing-instance {
+         key "name";
+         leaf name {
+           type string;
+         }
+         leaf type {
+           type identityref {
+             base routing-instance;
+           }
+           default "rt:default-routing-instance";
+         leaf enabled {
+           type boolean;
+           default "true";
+         uses router-id {
+           if-feature router-id;
+         leaf description {
+           type string;
+         container interfaces {
+           leaf-list interface {
+             type if:interface-ref;
+           }
+         }
+         container routing-protocols {
+           list routing-protocol {
+             key "type name";
+             leaf type {
+               type identityref {
+                 base routing-protocol;
+               }
+             }
+             leaf name {
+               type string;
+             }
+             leaf description {
+               type string;
+             }
+             container static-routes {
+               when "../type='rt:static'" {
+               }
+             }
+           }
+         }
+         container ribs {
+           list rib {
+             key "name";
+             leaf name {
+               type string;
+             }
+             uses address-family {
+               refine "address-family" {
+                 mandatory "false";
+               }
+             }
+             leaf description {
+               type string;
+             }
+           }
+         }
+       }
+     }
+   }

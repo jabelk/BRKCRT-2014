@@ -27,3 +27,15 @@ These ones I think would be most interesting to me, not sure how many you are lo
 3.3 Configure device using RESTCONF API utilizing Python requests library
 
 3.4 Utilize Ansible to configure an IOS XE device
+
+## Details
+
+Using [IOS XE on CSR Recommended Code](https://devnetsandbox.cisco.com/RM/Diagram/Index/05097c44-b162-4ea5-a1df-a449b4bd81c8)
+
+
+curl -X 'GET' \
+  'https://localhost:8443/restconf/proxy/https://10.10.20.48:443/restconf/data/ietf-routing:routing/routing-instance' \
+  -H 'accept: application/yang-data+json'
+
+https://localhost:8443/restconf/proxy/https://10.10.20.48:443/restconf/data/ietf-routing:routing/routing-instance
+

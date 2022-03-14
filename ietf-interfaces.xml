@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<rpc-reply message-id="urn:uuid:1cde6849-76f4-40a1-9727-a644f855e5ec"
+    xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"
+    xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <data>
+        <interfaces xmlns="urn:ietf:params:xml:ns:yang:ietf-interfaces">
+            <interface>
+                <name>GigabitEthernet1</name>
+                <description>MANAGEMENT INTERFACE - DON'T TOUCH ME</description>
+                <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:ethernetCsmacd</type>
+                <enabled>true</enabled>
+                <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip">
+                    <address>
+                        <ip>10.10.20.48</ip>
+                        <netmask>255.255.255.0</netmask>
+                    </address>
+                </ipv4>
+                <ipv6 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip"/>
+            </interface>
+            <interface>
+                <name>GigabitEthernet2</name>
+                <description>Network Interface</description>
+                <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:ethernetCsmacd</type>
+                <enabled>false</enabled>
+                <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip"/>
+                <ipv6 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip"/>
+            </interface>
+            <interface>
+                <name>GigabitEthernet3</name>
+                <description>Network Interface</description>
+                <type xmlns:ianaift="urn:ietf:params:xml:ns:yang:iana-if-type">ianaift:ethernetCsmacd</type>
+                <enabled>false</enabled>
+                <ipv4 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip"/>
+                <ipv6 xmlns="urn:ietf:params:xml:ns:yang:ietf-ip"/>
+            </interface>
+        </interfaces>
+    </data>
+</rpc-reply>
