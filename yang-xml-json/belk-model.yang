@@ -1,0 +1,8 @@
+module belk-model {
+  namespace "http://com/example/belkmodel";
+  prefix belk-model;
+  container person {
+    leaf name { type string;}
+    leaf age {type uint32;}
+    leaf favorite-color { type string;}
+}}

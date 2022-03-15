@@ -1,0 +1,9 @@
+{
+    "data": {
+        "router-model:router": {
+            "name": "SJC-GW1",
+            "address": "10.10.20.40",
+            "operational-status": "up"
+        }
+    }
+}

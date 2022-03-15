@@ -1,0 +1,5 @@
+<person xmlns="http://com/example/belkmodel">
+    <name>Jason Belk</name>
+    <age>33</age>
+    <favorite-color>green</favorite-color>
+</person>
