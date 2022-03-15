@@ -1,0 +1,5 @@
+module: belk-model
+  +--rw person
+     +--rw name?             string
+     +--rw age?              uint32
+     +--rw favorite-color?   string
